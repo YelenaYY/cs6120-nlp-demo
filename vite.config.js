@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [vue()], // Enables Vue 3 support
-  base: '/cs6120-nlp-demo/',
-  assetsInclude: ["**/*.csv"],
+  base: command === 'serve' ? '/' : '/cs6120-nlp-demo/',
+  assetsInclude: ["**/*.csv", "**/*.pdf", "**/*.png"],
   resolve: {
     alias: {
       '@': '/src' // Allows to use '@' as an alias for 'src' folder
@@ -26,4 +26,4 @@ export default defineConfig({
     }
   },
   publicDir: "public", // Ensures static assets are properly served
-});
+}));
