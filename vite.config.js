@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [vue()], // Enables Vue 3 support
@@ -7,7 +8,7 @@ export default defineConfig({
   assetsInclude: ['**/*.csv', '**/*.pdf', '**/*.png'],
   resolve: {
     alias: {
-      '@': '/src' // Allows to use '@' as an alias for 'src' folder
+      '@': resolve(__dirname, 'src')
     }
   },
   server: {
@@ -17,12 +18,22 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist', // Output directory for production build
+    emptyOutDir: true,
     sourcemap: true, // Helps with debugging
     assetsDir: 'assets',
     copyPublicDir: true,
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html')
+      },
       output: {
-        manualChunks: undefined
+        manualChunks: undefined,
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name.endsWith('.pdf')) {
+            return '[name][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        }
       }
     }
   },

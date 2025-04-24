@@ -1,5 +1,5 @@
 {
-  "name": "llm-agent-evaluation",
+  "name": "moe-icd",
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "url": "https://github.com/YelenaYY/cs6120-nlp-demo/issues"
   },
   "homepage": "https://YelenaYY.github.io/cs6120-nlp-demo/",
-  "description": "",
+  "description": "Mixture of Experts for ICD Code Assignment",
   "dependencies": {
     "@vueuse/router": "^12.8.2",
     "vite": "^6.2.0",
