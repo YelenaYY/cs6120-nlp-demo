@@ -1,0 +1,32 @@
+{
+  "name": "llm-agent-evaluation",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neuhai/LLM-Agent-Evaluation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neuhai/LLM-Agent-Evaluation/issues"
+  },
+  "homepage": "https://github.com/neuhai/LLM-Agent-Evaluation#readme",
+  "description": "",
+  "dependencies": {
+    "@vueuse/router": "^12.8.2",
+    "vite": "^6.2.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1"
+  }
+}
