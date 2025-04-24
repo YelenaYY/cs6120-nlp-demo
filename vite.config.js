@@ -18,5 +18,6 @@ export default defineConfig({
     outDir: 'dist', // Output directory for production build
     sourcemap: true // Helps with debugging
   },
-  publicDir: "public" // Ensures static assets are properly served
+  publicDir: "public", // Ensures static assets are properly served
+  base: '/cs6120-nlp-demo/',
 });

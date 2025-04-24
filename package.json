@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neuhai/LLM-Agent-Evaluation.git"
+    "url": "git+https://github.com/YelenaYY/cs6120-nlp-demo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/neuhai/LLM-Agent-Evaluation/issues"
+    "url": "https://github.com/YelenaYY/cs6120-nlp-demo/issues"
   },
-  "homepage": "https://github.com/neuhai/LLM-Agent-Evaluation#readme",
+  "homepage": "https://YelenaYY.github.io/cs6120-nlp-demo/",
   "description": "",
   "dependencies": {
     "@vueuse/router": "^12.8.2",
