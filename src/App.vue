@@ -38,7 +38,7 @@
       GitHub
     </a>
     <a
-      href="/NLP_Final_Project.pdf"
+      href="https://yelenayy.github.io/cs6120-nlp-demo/NLP_Final_Project.pdf"
       class="custom-button"
       target="_blank"
       rel="noopener noreferrer"
@@ -56,10 +56,10 @@
 
   <!-- Image Section -->
   <div class="image-container">
-    <img src="/icd-code-distribution-diagram-1.png" alt="ICD Code Distribution Diagram 1" />
+    <img src="./icd-code-distribution-diagram-1.png" alt="ICD Code Distribution Diagram 1" />
   </div>
   <div class="image-container">
-    <img src="/icd-code-distribution-diagram-2.png" alt="ICD Code Distribution Diagram 2" />
+    <img src="./icd-code-distribution-diagram-2.png" alt="ICD Code Distribution Diagram 2" />
   </div>
 
   <!-- Description Section -->
@@ -68,10 +68,10 @@
   </p>
 
   <div class="image-container">
-    <img src="/llm-architecture.png" alt="Solution | LLM Architecture" />
+    <img src="./llm-architecture.png" alt="Solution | LLM Architecture" />
   </div>
   <div class="image-container">
-    <img src="/moe-architecture.png" alt="Solution | MoE Architecture" />
+    <img src="./moe-architecture.png" alt="Solution | MoE Architecture" />
   </div>
 
 </template>

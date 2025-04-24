@@ -4,7 +4,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [vue()], // Enables Vue 3 support
-  base: '/cs6120-nlp-demo/',
+  base: '/',  // This will be automatically adjusted for production
   assetsInclude: ['**/*.csv', '**/*.pdf', '**/*.png'],
   resolve: {
     alias: {
@@ -29,10 +29,12 @@ export default defineConfig({
       output: {
         manualChunks: undefined,
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name.endsWith('.pdf')) {
-            return '[name][extname]';
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico|pdf/i.test(ext)) {
+            return `[name][extname]`;
           }
-          return 'assets/[name]-[hash][extname]';
+          return `assets/[name]-[hash][extname]`;
         }
       }
     }
