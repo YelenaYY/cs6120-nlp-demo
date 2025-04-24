@@ -4,7 +4,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [vue()], // Enables Vue 3 support
-  base: '/',  // This will be automatically adjusted for production
+  base: '/cs6120-nlp-demo/',
   assetsInclude: ['**/*.csv', '**/*.pdf', '**/*.png'],
   resolve: {
     alias: {
@@ -20,7 +20,7 @@ export default defineConfig({
     outDir: 'dist', // Output directory for production build
     emptyOutDir: true,
     sourcemap: true, // Helps with debugging
-    assetsDir: 'assets',
+    assetsDir: '',  // This will put assets in the root of dist
     copyPublicDir: true,
     rollupOptions: {
       input: {
@@ -29,12 +29,8 @@ export default defineConfig({
       output: {
         manualChunks: undefined,
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico|pdf/i.test(ext)) {
-            return `[name][extname]`;
-          }
-          return `assets/[name]-[hash][extname]`;
+          // Keep original filenames without hashing
+          return `[name][extname]`
         }
       }
     }
